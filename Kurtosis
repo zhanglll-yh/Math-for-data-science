@@ -1,0 +1,53 @@
+**Kurtosis** is a statistical measure that describes the *shape* of a distribution’s tails compared to a normal distribution.
+It tells you whether the data have *heavier or lighter tails* than a normal bell curve.
+
+---
+
+### **Formula**
+
+For a dataset $x_1, x_2, \dots, x_n$:
+
+$$
+\text{kurtosis} = \frac{\frac{1}{n} \sum_{i=1}^n (x_i - \bar{x})^4}{\left( \frac{1}{n} \sum_{i=1}^n (x_i - \bar{x})^2 \right)^2}
+$$
+
+* The numerator is the **fourth central moment** (measures extreme deviations).
+* The denominator is the square of the variance.
+
+---
+
+### **Types**
+
+* **Excess Kurtosis** = Kurtosis − 3
+  (Because a normal distribution has kurtosis = 3, excess kurtosis = 0 for normal.)
+
+| Excess Kurtosis | Name            | Meaning                                  |
+| --------------- | --------------- | ---------------------------------------- |
+| > 0             | **Leptokurtic** | Heavier tails, more outliers than normal |
+| = 0             | **Mesokurtic**  | Similar to normal distribution           |
+| < 0             | **Platykurtic** | Lighter tails, fewer outliers            |
+
+---
+
+### **Interpretation**
+
+* **High kurtosis (> 3)** → data prone to extreme values (fat tails).
+* **Low kurtosis (< 3)** → data are more evenly distributed, fewer extreme values.
+* **Exactly 3** (or excess = 0) → shape similar to normal.
+
+---
+
+💡 Quick example in Python:
+
+```python
+import pandas as pd
+import scipy.stats as stats
+
+data = [2, 3, 3, 4, 4, 4, 5, 5, 100]  # has an extreme value
+kurt = stats.kurtosis(data)  # excess kurtosis
+print(kurt)  # > 0 means heavy-tailed
+```
+
+---
+
+If you want, I can also give you a **visual example** comparing high, normal, and low kurtosis distributions so you see the difference. Would you like me to?
