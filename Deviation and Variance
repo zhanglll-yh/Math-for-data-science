@@ -1,0 +1,60 @@
+Sure! Let me explain both in a simple, intuitive way:
+
+---
+
+### 🔹 Deviation
+
+* A **deviation** is how far a single data point is from the mean (average) of the dataset.
+* It tells you: *"How much does this value differ from the average?"*
+* Formula for deviation of a value $x_i$:
+
+  $$
+  d_i = x_i - \bar{x}
+  $$
+
+  where $\bar{x}$ is the mean.
+
+---
+
+### 🔹 Variance
+
+* **Variance** measures how spread out the data is overall.
+* It takes all the deviations, squares them (to make them positive), and averages them.
+* So variance tells you: *"On average, how far are all the data points from the mean squared?"*
+* Formula (for population variance):
+
+  $$
+  \sigma^2 = \frac{1}{N} \sum_{i=1}^{N} (x_i - \bar{x})^2
+  $$
+
+For sample variance (if you're using a sample instead of full population), you divide by $N - 1$ instead of $N$.
+
+---
+
+### 🔹 Simple analogy:
+
+Imagine the mean is a central point.
+
+* **Deviation**: distance of one person from that point.
+* **Variance**: average of the squared distances of EVERYONE from that point.
+
+---
+
+### Bonus: Standard Deviation
+
+* Standard deviation is just the *square root* of variance.
+* It brings the spread back to the original units (since variance is in squared units).
+
+---
+
+### Summary Table
+
+| Term               | Meaning                                  |
+| ------------------ | ---------------------------------------- |
+| Deviation          | One point's distance from the mean       |
+| Variance           | Average of squared deviations (spread)   |
+| Standard Deviation | Square root of variance (typical spread) |
+
+---
+
+
