@@ -1,0 +1,63 @@
+
+### What is a Moving Average?
+
+A **moving average** is a smoothing technique used to see the trend in data by averaging values over a fixed window that “moves” through the dataset.
+
+---
+
+### Imagine like this:
+
+Suppose you want to know the "average temperature of the last 7 days", but you calculate this every day.
+
+Example (window = 7 days):
+
+* On Day 7 → average of Day 1 to Day 7
+* On Day 8 → average of Day 2 to Day 8
+* On Day 9 → average of Day 3 to Day 9
+* ...and so on.
+
+So the window keeps **sliding forward** (moving), dropping the old value and including the new value.
+
+---
+
+### Why use a moving average?
+
+* To **smooth out noise** in data (remove random fluctuations).
+* Make the **trend** easier to see.
+* Often used in stock prices, weather data, time-series forecasting.
+
+---
+
+### One sentence definition:
+
+> A moving average is the average of the last *N* points in your data, recalculated as you move forward through the series.
+
+---
+
+### Visualization (simple):
+
+If your data is:
+`[3, 5, 7, 6, 4, 8, 10, 11]`, and window = 3
+
+Moving averages will be:
+
+```
+(3+5+7)/3 = 5   -> for positions [1-3]
+(5+7+6)/3 = 6   -> for positions [2-4]
+(7+6+4)/3 = 5.67 -> for positions [3-5]
+...
+```
+
+Each new point takes the *last 3 numbers* and averages them.
+
+---
+
+
+### TL;DR
+
+**Moving average** = smooth line created by averaging previous few values again and again.
+It helps to see the pattern better and is used as a simple forecasting method.
+
+---
+
+Let me know if you want a diagram or animation-style explanation — I can draw it for you too 😊
